@@ -40,7 +40,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "interface_name": "",
+      "interface_name": "tun0",
       "address": [
         "172.18.0.1/30",
         "fdfe:dcba:9876::1/126"
@@ -603,8 +603,7 @@
     "servers": [
       {
         "tag": "Local-DNS",
-        "address": "https://223.5.5.5:443/dns-query",
-        "address_resolver": "Local-DNS-Resolver",
+        "address": "tls://223.5.5.5:853",
         "detour": "🎯 全球直连"
       },
       {
@@ -615,7 +614,6 @@
       {
         "tag": "Remote-DNS",
         "address": "tls://8.8.8.8:853",
-        "address_resolver": "Remote-DNS-Resolver",
         "detour": "🚀 节点选择"
       },
       {
@@ -658,7 +656,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS",
-    "strategy": "prefer_ipv6"
+    "final": "Local-DNS-Resolver"
   }
 }
