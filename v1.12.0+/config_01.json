@@ -40,7 +40,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "interface_name": "",
+      "interface_name": "tun0",
       "address": [
         "172.18.0.1/30",
         "fdfe:dcba:9876::1/126"
@@ -606,11 +606,9 @@
     "servers": [
       {
         "tag": "Local-DNS",
-        "type": "https",
-        "domain_resolver": "Local-DNS-Resolver",
-        "server_port": 443,
-        "server": "223.5.5.5",
-        "path": "/dns-query"
+        "type": "tls",
+        "server_port": 853,
+        "server": "223.5.5.5"
       },
       {
         "tag": "Local-DNS-Resolver",
@@ -622,7 +620,6 @@
         "tag": "Remote-DNS",
         "type": "tls",
         "detour": "🚀 节点选择",
-        "domain_resolver": "Remote-DNS-Resolver",
         "server_port": 853,
         "server": "8.8.8.8"
       },
@@ -663,7 +660,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS",
-    "strategy": "prefer_ipv6"
+    "final": "Local-DNS-Resolver"
   }
 }
