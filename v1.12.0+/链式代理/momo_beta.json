@@ -10,7 +10,7 @@
       "external_controller": "0.0.0.0:20123",
       "external_ui": "/ui",
       "external_ui_download_url": "",
-      "external_ui_download_detour": "🎯 全球直连",
+      "external_ui_download_detour": "🚀 落地节点",
       "secret": "40cf80546ed45fb9fc0a15fe0bcf3807ad0b4bb6453e25e784ee449cc4789ff4",
       "default_mode": "rule",
       "access_control_allow_origin": [
