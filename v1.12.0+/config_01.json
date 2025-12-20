@@ -628,7 +628,7 @@
       {
         "tag": "Local-DNS",
         "type": "tls",
-        "server_port": 852,
+        "server_port": 853,
         "server": "223.5.5.5"
       },
       {
