@@ -184,7 +184,8 @@
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
-        "🇺🇸 美国"
+        "🇺🇸 美国",
+        "🎯 全球直连"
       ]
     },
     {
@@ -262,14 +263,14 @@
       "tag": "📦 Github",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "🎯 全球直连",
         "🚀 落地节点",
         "🧭 机场节点",
         "🇭🇰 香港",
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
-        "🇺🇸 美国"
+        "🇺🇸 美国",
+        "🎯 全球直连"
       ]
     },
     {
@@ -318,8 +319,7 @@
         "action": "route",
         "rule_set": [
           "Telegram",
-          "Telegram_asn",
-          "Telegram_IP"
+          "Telegram_ASN"
         ],
         "outbound": "✈️ Telegram"
       },
@@ -407,13 +407,15 @@
       },
       {
         "action": "reject",
-        "protocol": "quic"
+        "protocol": "quic",
+        "method": ""
       },
       {
         "action": "reject",
         "rule_set": [
           "Category-Ads"
-        ]
+        ],
+        "method": ""
       },
       {
         "action": "route",
@@ -551,16 +553,9 @@
         "download_detour": "🚀 落地节点"
       },
       {
-        "tag": "Telegram_asn",
+        "tag": "Telegram_ASN",
         "type": "remote",
         "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram_asn.srs",
-        "format": "binary",
-        "download_detour": "🚀 落地节点"
-      },
-      {
-        "tag": "Telegram_IP",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram.srs",
         "format": "binary",
         "download_detour": "🚀 落地节点"
       },
@@ -615,7 +610,7 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🐟 漏网之鱼",
+    "final": "🚀 落地节点",
     "default_domain_resolver": {
       "server": "Local-DNS"
     }
@@ -678,6 +673,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Local-DNS-Resolver"
+    "final": "Remote-DNS"
   }
 }
