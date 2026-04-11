@@ -23,7 +23,6 @@
       "path": "cache.db",
       "cache_id": "",
       "store_fakeip": false,
-      "store_rdrc": true,
       "rdrc_timeout": "7d"
     }
   },
@@ -464,6 +463,13 @@
     ],
     "rule_set": [
       {
+        "tag": "bilibili@!cn",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili@!cn.srs",
+        "format": "binary",
+        "download_detour": "🚀 落地节点"
+      },
+      {
         "tag": "GeoLocation-CN",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-cn.srs",
@@ -550,21 +556,21 @@
       {
         "tag": "bilibili",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bilibili.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
         "format": "binary",
         "download_detour": "🚀 落地节点"
       },
       {
         "tag": "bilibili-cdn",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bilibili-cdn.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili-cdn.srs",
         "format": "binary",
         "download_detour": "🚀 落地节点"
       },
       {
         "tag": "bilibili-game",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bilibili-game.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili-game.srs",
         "format": "binary",
         "download_detour": "🚀 落地节点"
       },
