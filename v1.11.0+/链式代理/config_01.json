@@ -299,6 +299,50 @@
   "route": {
     "rules": [
       {
+        "action": "sniff",
+        "inbound": "tun-in"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "Category-Ads"
+        ],
+        "method": ""
+      },
+      {
+        "action": "reject",
+        "protocol": "quic",
+        "method": ""
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoSite-Private"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoIP-Private"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
         "action": "route",
         "rule_set": [
           "Github"
@@ -389,39 +433,9 @@
         "outbound": "🔍 Bing"
       },
       {
-        "action": "sniff",
-        "inbound": "tun-in"
-      },
-      {
-        "action": "hijack-dns",
-        "protocol": "dns"
-      },
-      {
-        "action": "route",
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
-      },
-      {
-        "action": "reject",
-        "protocol": "quic",
-        "method": ""
-      },
-      {
-        "action": "reject",
-        "rule_set": [
-          "Category-Ads"
-        ],
-        "method": ""
-      },
-      {
         "action": "route",
         "rule_set": [
-          "GeoSite-Private"
+          "GeoLocation-CN"
         ],
         "outbound": "🎯 全球直连"
       },
@@ -435,21 +449,7 @@
       {
         "action": "route",
         "rule_set": [
-          "GeoIP-Private"
-        ],
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "GeoIP-CN"
-        ],
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoLocation-CN"
         ],
         "outbound": "🎯 全球直连"
       },
