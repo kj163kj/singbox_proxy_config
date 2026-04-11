@@ -36,27 +36,6 @@
       "tcp_fast_open": false,
       "tcp_multi_path": false,
       "udp_fragment": false
-    },
-    {
-      "type": "tun",
-      "tag": "tun-in",
-      "interface_name": "",
-      "address": [
-        "172.18.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
-      "mtu": 9000,
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": false,
-      "stack": "mixed",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 20122
-        }
-      }
     }
   ],
   "outbounds": [
