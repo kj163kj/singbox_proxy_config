@@ -23,7 +23,6 @@
       "path": "cache.db",
       "cache_id": "",
       "store_fakeip": false,
-      "store_rdrc": true,
       "rdrc_timeout": "7d"
     }
   },
@@ -49,7 +48,7 @@
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": false,
-      "stack": "mixed",
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -172,7 +171,8 @@
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
-        "🇺🇸 美国"
+        "🇺🇸 美国",
+        "🎯 全球直连"
       ]
     },
     {
@@ -246,12 +246,12 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🚀 节点选择",
-        "🎯 全球直连",
         "🇭🇰 香港",
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
-        "🇺🇸 美国"
+        "🇺🇸 美国",
+        "🎯 全球直连"
       ]
     },
     {
@@ -281,6 +281,50 @@
   "route": {
     "rules": [
       {
+        "action": "sniff",
+        "inbound": "tun-in"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "Category-Ads"
+        ],
+        "method": ""
+      },
+      {
+        "action": "reject",
+        "protocol": "quic",
+        "method": ""
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoSite-Private"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoIP-Private"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
         "action": "route",
         "rule_set": [
           "Github"
@@ -300,7 +344,6 @@
         "action": "route",
         "rule_set": [
           "Telegram",
-          "Telegram_asn",
           "Telegram_IP"
         ],
         "outbound": "✈️ Telegram"
@@ -329,7 +372,9 @@
       {
         "action": "route",
         "rule_set": [
-          "哔哩国际"
+          "bilibili",
+          "bilibili-cdn",
+          "bilibili-game"
         ],
         "outbound": "🎥 bilibili"
       },
@@ -370,37 +415,9 @@
         "outbound": "🔍 Bing"
       },
       {
-        "action": "sniff",
-        "inbound": "tun-in"
-      },
-      {
-        "action": "hijack-dns",
-        "protocol": "dns"
-      },
-      {
-        "action": "route",
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
-      },
-      {
-        "action": "reject",
-        "protocol": "quic"
-      },
-      {
-        "action": "reject",
-        "rule_set": [
-          "Category-Ads"
-        ]
-      },
-      {
         "action": "route",
         "rule_set": [
-          "GeoSite-Private"
+          "GeoLocation-CN"
         ],
         "outbound": "🎯 全球直连"
       },
@@ -408,13 +425,6 @@
         "action": "route",
         "rule_set": [
           "GeoSite-CN"
-        ],
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoIP-Private"
         ],
         "outbound": "🎯 全球直连"
       },
@@ -434,6 +444,20 @@
       }
     ],
     "rule_set": [
+      {
+        "tag": "bilibili@!cn",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili@!cn.srs",
+        "format": "binary",
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "GeoLocation-CN",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-cn.srs",
+        "format": "binary",
+        "download_detour": "🚀 节点选择"
+      },
       {
         "tag": "OpenAI",
         "type": "remote",
@@ -512,9 +536,23 @@
         "download_detour": "🚀 节点选择"
       },
       {
-        "tag": "哔哩国际",
+        "tag": "bilibili",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bilibili.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
+        "format": "binary",
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "bilibili-cdn",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili-cdn.srs",
+        "format": "binary",
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "bilibili-game",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili-game.srs",
         "format": "binary",
         "download_detour": "🚀 节点选择"
       },
@@ -533,16 +571,9 @@
         "download_detour": "🚀 节点选择"
       },
       {
-        "tag": "Telegram_asn",
-        "type": "remote",
-        "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram_asn.srs",
-        "format": "binary",
-        "download_detour": "🚀 节点选择"
-      },
-      {
         "tag": "Telegram_IP",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram.srs",
+        "url": "https://raw.githubusercontent.com/lyc8503/sing-box-rules/refs/heads/rule-set-geoip/geoip-telegram.srs",
         "format": "binary",
         "download_detour": "🚀 节点选择"
       },
@@ -597,13 +628,14 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🐟 漏网之鱼"
+    "final": "🚀 节点选择"
   },
   "dns": {
     "servers": [
       {
         "tag": "Local-DNS",
         "address": "tls://223.5.5.5:853",
+        "address_resolver": "Local-DNS-Resolver",
         "detour": "🎯 全球直连"
       },
       {
@@ -637,6 +669,13 @@
         "action": "route",
         "clash_mode": "global",
         "server": "Remote-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoLocation-CN"
+        ],
+        "server": "Local-DNS"
       },
       {
         "action": "route",
