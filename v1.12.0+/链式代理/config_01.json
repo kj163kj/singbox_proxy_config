@@ -646,41 +646,38 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🚀 落地节点",
-    "default_domain_resolver": {
-      "server": "Local-DNS"
-    }
+    "final": "🚀 落地节点"
   },
   "dns": {
     "servers": [
       {
         "tag": "Local-DNS",
-        "type": "tls",
-        "server_port": 853,
-        "server": "223.5.5.5"
+        "address": "tls://223.5.5.5:853",
+        "address_resolver": "Local-DNS-Resolver",
+        "detour": "🎯 全球直连"
       },
       {
         "tag": "Local-DNS-Resolver",
-        "type": "udp",
-        "server_port": 53,
-        "server": "223.5.5.5"
+        "address": "udp://223.5.5.5:53",
+        "detour": "🎯 全球直连"
       },
       {
         "tag": "Remote-DNS",
-        "type": "tls",
-        "detour": "🚀 落地节点",
-        "server_port": 853,
-        "server": "8.8.8.8"
+        "address": "tls://8.8.8.8:853",
+        "detour": "🚀 落地节点"
       },
       {
         "tag": "Remote-DNS-Resolver",
-        "type": "udp",
-        "detour": "🚀 落地节点",
-        "server_port": 53,
-        "server": "8.8.8.8"
+        "address": "udp://8.8.8.8:53",
+        "detour": "🚀 落地节点"
       }
     ],
     "rules": [
+      {
+        "action": "route",
+        "server": "Local-DNS",
+        "outbound": "any"
+      },
       {
         "action": "route",
         "clash_mode": "direct",
@@ -716,6 +713,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS"
+    "final": "Local-DNS-Resolver"
   }
 }
