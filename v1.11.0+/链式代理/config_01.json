@@ -653,6 +653,7 @@
       {
         "tag": "Local-DNS",
         "address": "tls://223.5.5.5:853",
+        "address_resolver": "Local-DNS-Resolver",
         "detour": "🎯 全球直连"
       },
       {
@@ -712,6 +713,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS"
+    "final": "Local-DNS-Resolver"
   }
 }
