@@ -646,38 +646,42 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🚀 落地节点"
+    "final": "🚀 落地节点",
+    "default_domain_resolver": {
+      "server": "Local-DNS"
+    }
   },
   "dns": {
     "servers": [
       {
         "tag": "Local-DNS",
-        "address": "tls://223.5.5.5:853",
-        "address_resolver": "Local-DNS-Resolver",
-        "detour": "🎯 全球直连"
+        "type": "tls",
+        "domain_resolver": "Local-DNS-Resolver",
+        "server_port": 853,
+        "server": "223.5.5.5"
       },
       {
         "tag": "Local-DNS-Resolver",
-        "address": "udp://223.5.5.5:53",
-        "detour": "🎯 全球直连"
+        "type": "udp",
+        "server_port": 53,
+        "server": "223.5.5.5"
       },
       {
         "tag": "Remote-DNS",
-        "address": "tls://8.8.8.8:853",
-        "detour": "🚀 落地节点"
+        "type": "tls",
+        "detour": "🚀 落地节点",
+        "server_port": 853,
+        "server": "8.8.8.8"
       },
       {
         "tag": "Remote-DNS-Resolver",
-        "address": "udp://8.8.8.8:53",
-        "detour": "🚀 落地节点"
+        "type": "udp",
+        "detour": "🚀 落地节点",
+        "server_port": 53,
+        "server": "8.8.8.8"
       }
     ],
     "rules": [
-      {
-        "action": "route",
-        "server": "Local-DNS",
-        "outbound": "any"
-      },
       {
         "action": "route",
         "clash_mode": "direct",
