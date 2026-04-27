@@ -638,7 +638,6 @@
       {
         "tag": "Local-DNS",
         "type": "tls",
-        "domain_resolver": "Local-DNS-Resolver",
         "server_port": 853,
         "server": "223.5.5.5"
       },
