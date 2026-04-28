@@ -308,15 +308,25 @@
       },
       {
         "action": "reject",
+        "protocol": "quic",
+        "method": ""
+      },
+      {
+        "action": "reject",
         "rule_set": [
           "Category-Ads"
         ],
         "method": ""
       },
       {
-        "action": "reject",
-        "protocol": "quic",
-        "method": ""
+        "action": "route",
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
       },
       {
         "action": "route",
@@ -331,16 +341,6 @@
           "GeoIP-Private"
         ],
         "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
       },
       {
         "action": "route",
@@ -653,7 +653,6 @@
       {
         "tag": "Local-DNS",
         "address": "tls://223.5.5.5:853",
-        "address_resolver": "Local-DNS-Resolver",
         "detour": "🎯 全球直连"
       },
       {
@@ -713,6 +712,7 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Local-DNS-Resolver"
+    "final": "Remote-DNS",
+    "strategy": "prefer_ipv6"
   }
 }
