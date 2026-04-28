@@ -717,6 +717,6 @@
     "disable_expire": false,
     "independent_cache": false,
     "final": "Remote-DNS",
-    "strategy": "prefer_ipv6"
+    "strategy": "prefer_ipv4"
   }
 }
