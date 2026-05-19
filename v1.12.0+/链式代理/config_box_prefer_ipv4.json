@@ -28,20 +28,6 @@
   },
   "inbounds": [
     {
-      "type": "tun",
-      "tag": "tun-in",
-      "interface_name": "tun0",
-      "address": [
-        "172.18.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
-      "mtu": 9000,
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": false,
-      "stack": "gvisor"
-    },
-    {
       "type": "tproxy",
       "tag": "tproxy-in",
       "listen": "::",
@@ -296,7 +282,7 @@
     "rules": [
       {
         "action": "sniff",
-        "inbound": "tun-in"
+        "inbound": "tproxy-in"
       },
       {
         "action": "hijack-dns",
