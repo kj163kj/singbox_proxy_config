@@ -28,15 +28,6 @@
   },
   "inbounds": [
     {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 20122,
-      "tcp_fast_open": false,
-      "tcp_multi_path": false,
-      "udp_fragment": false
-    },
-    {
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "tun0",
@@ -48,14 +39,19 @@
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": false,
-      "stack": "system",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 20122
-        }
-      }
+      "stack": "gvisor"
+    },
+    {
+      "type": "tproxy",
+      "tag": "tproxy-in",
+      "listen": "::",
+      "listen_port": 12345
+    },
+    {
+      "tag": "redirect-in",
+      "type": "redirect",
+      "listen": "::",
+      "listen_port": 7890
     }
   ],
   "outbounds": [
