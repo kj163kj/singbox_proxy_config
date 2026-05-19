@@ -290,15 +290,25 @@
       },
       {
         "action": "reject",
+        "protocol": "quic",
+        "method": ""
+      },
+      {
+        "action": "reject",
         "rule_set": [
           "Category-Ads"
         ],
         "method": ""
       },
       {
-        "action": "reject",
-        "protocol": "quic",
-        "method": ""
+        "action": "route",
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
       },
       {
         "action": "route",
@@ -313,16 +323,6 @@
           "GeoIP-Private"
         ],
         "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
       },
       {
         "action": "route",
