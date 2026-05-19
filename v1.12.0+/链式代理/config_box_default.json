@@ -14,7 +14,7 @@
       "secret": "40cf80546ed45fb9fc0a15fe0bcf3807ad0b4bb6453e25e784ee449cc4789ff4",
       "default_mode": "rule",
       "access_control_allow_origin": [
-        ""
+        "*"
       ],
       "access_control_allow_private_network": false
     },
@@ -295,7 +295,8 @@
   "route": {
     "rules": [
       {
-        "action": "sniff"
+        "action": "sniff",
+        "inbound": "tun-in"
       },
       {
         "action": "hijack-dns",
@@ -303,13 +304,15 @@
       },
       {
         "action": "reject",
-        "protocol": "quic"
+        "protocol": "quic",
+        "method": ""
       },
       {
         "action": "reject",
         "rule_set": [
           "Category-Ads"
-        ]
+        ],
+        "method": ""
       },
       {
         "action": "route",
@@ -709,6 +712,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS"
+    "final": "Local-DNS-Resolver"
   }
 }
