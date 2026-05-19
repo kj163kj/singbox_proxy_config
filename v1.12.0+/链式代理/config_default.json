@@ -716,6 +716,6 @@
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,
-    "final": "Remote-DNS",
+    "final": "Local-DNS-Resolver"
   }
 }
