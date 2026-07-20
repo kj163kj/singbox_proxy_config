@@ -1,6 +1,8 @@
-# 📦 singbox_proxy_config
+# 📦 Sing-Box_proxy_config
 
 一个用于存放 [Sing-box](https://sing-box.sagernet.org/) 配置的仓库。
+
+> ⚠️ **重要提醒**：当前配置仅支持 Sing-box `v1.14.0-alpha+` 及以上版本，**旧版配置已删除**。请确保您的客户端已更新至兼容版本。
 
 ---
 
