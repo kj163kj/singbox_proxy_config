@@ -13,6 +13,7 @@
 |---|---|
 | [`sfa-sfw`](../../tree/sfa-sfw) | sing-box for Android（SFA）与 sing-box for Windows（SFW） |
 | [`sfi`](../../tree/sfi) | sing-box for iOS（SFI）TestFlight 测试版，仅支持 `v1.14.0-alpha+` |
+| [`sfm`](../../tree/sfm) | sing-box for macOS（SFM），未经实机测试，有问题请通过 Issues 反馈 |
 | [`box-for-root`](../../tree/box-for-root) | Android Root 环境的 [Box for Root](https://github.com/boxproxy/box) |
 | [`openwrt-momo`](../../tree/openwrt-momo) | OpenWrt 的 [OpenWrt-momo](https://github.com/nikkinikki-org/OpenWrt-momo) |
 
