@@ -12,6 +12,7 @@
 | 分支 | 适用平台 |
 |---|---|
 | [`sfa-sfw`](../../tree/sfa-sfw) | sing-box for Android（SFA）与 sing-box for Windows（SFW） |
+| [`sfi`](../../tree/sfi) | sing-box for iOS（SFI），基于 Apple NetworkExtension |
 | [`box-for-root`](../../tree/box-for-root) | Android Root 环境的 [Box for Root](https://github.com/boxproxy/box) |
 | [`openwrt-momo`](../../tree/openwrt-momo) | OpenWrt 的 [OpenWrt-momo](https://github.com/nikkinikki-org/OpenWrt-momo) |
 
