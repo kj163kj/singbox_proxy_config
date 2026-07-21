@@ -267,7 +267,6 @@
       {
         "action": "sniff",
         "inbound": [
-          "tproxy-in",
           "tun-in"
         ]
       },
