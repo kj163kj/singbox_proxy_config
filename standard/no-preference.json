@@ -714,7 +714,7 @@
       },
       {
         "action": "evaluate",
-        "server": "Local-DNS"
+        "server": "Remote-DNS"
       },
       {
         "match_response": true,
