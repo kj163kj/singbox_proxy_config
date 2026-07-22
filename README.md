@@ -2,9 +2,6 @@
 
 适用于 **sing-box for macOS（SFM）**，要求核心版本为 `v1.14.0-alpha+`。
 
-> [!WARNING]
-> 本分支配置尚未经 macOS 实机测试。如遇到兼容性或运行问题，请通过仓库 [Issues](https://github.com/kj163kj/singbox_proxy_config/issues) 反馈，并附上 SFM 版本、macOS 版本和相关日志。
-
 ## 配置文件
 
 ```text
