@@ -1,6 +1,6 @@
-# Linux 配置
+# SFL 配置
 
-适用于官方 **sing-box for Desktop（Linux / SFL）**，要求核心版本为 `v1.14.0-alpha.50+`。
+适用于官方 **sing-box for Linux (SFL)**，要求核心版本为 `v1.14.0-alpha.50+`。
 
 > [!IMPORTANT]
 > Linux GUI 支持从 sing-box `1.14.0-alpha.48` 开始。本分支配置按当前最新版 `1.14.0-alpha.50` 适配并校验，请使用最新版 SFL。
