@@ -3,7 +3,7 @@
 一个用于存放 [sing-box](https://sing-box.sagernet.org/) 当前配置模板的仓库。
 
 > [!IMPORTANT]
-> 当前配置仅支持 sing-box `v1.14.0-alpha+`。旧版配置已删除，请先升级客户端或核心。
+> 当前配置仅支持 sing-box `v1.15.0-alpha.3+`。旧版配置已删除，请先升级客户端或核心。
 >
 > 本仓库只维护当前配置，不提供旧版本 Tag 或 Release；更新会直接覆盖原文件。
 
@@ -12,7 +12,7 @@
 | 分支 | 适用平台 |
 |---|---|
 | [`sfa-sfw`](../../tree/sfa-sfw) | sing-box for Android（SFA）与 sing-box for Windows（SFW） |
-| [`sfi`](../../tree/sfi) | sing-box for iOS（SFI）TestFlight 测试版，仅支持 `v1.14.0-alpha+` |
+| [`sfi`](../../tree/sfi) | sing-box for iOS（SFI）TestFlight 测试版，仅支持 `v1.15.0-alpha.3+` |
 | [`sfm`](../../tree/sfm) | sing-box for macOS（SFM） |
 | [`sfl`](../../tree/sfl) | 官方 sing-box for Desktop（Linux / SFL），要求 `v1.14.0-alpha.50+` |
 | [`box-for-root`](../../tree/box-for-root) | Android Root 环境的 [Box for Root](https://github.com/boxproxy/box) |
@@ -96,3 +96,4 @@ sing-box check -c config.json
 - [Box for Root](https://github.com/boxproxy/box)
 - [OpenWrt-momo](https://github.com/nikkinikki-org/OpenWrt-momo)
 - [GUI.for.Cores Plugin Hub](https://github.com/GUI-for-Cores/Plugin-Hub)
+????? sing-box ?? TUN TCP/IP ?????????????? `stack` ??????????????? `v1.15.0-alpha.3` ??????
