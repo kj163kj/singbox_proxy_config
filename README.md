@@ -1,6 +1,6 @@
 # SFI 配置
 
-适用于 **sing-box for iOS（SFI）TestFlight 测试版**，要求核心版本为 `v1.14.0-alpha+`。
+适用于 **sing-box for iOS（SFI）TestFlight 测试版**，要求核心版本为 `v1.15.0-alpha.3+`。
 
 > [!IMPORTANT]
 > 本分支配置只支持 SFI 测试版，不支持当前正式版/App Store 版。
@@ -30,3 +30,4 @@ chain/
 ## 使用说明
 
 这些文件是 Sub-Store 模板，需先填入真实节点，再将生成的最终配置导入 SFI 测试版。未渲染模板不能直接启动。
+????? sing-box ?? TUN TCP/IP ?????????????? `stack` ??????????????? `v1.15.0-alpha.3` ??????

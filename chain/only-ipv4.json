@@ -18,7 +18,6 @@
         "172.18.0.1/30"
       ],
       "mtu": 1420,
-      "stack": "mixed",
       "dns_mode": "hijack",
       "auto_route": true,
       "udp_nat_max": 4096
