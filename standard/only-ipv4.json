@@ -19,7 +19,6 @@
         "172.18.0.1/30"
       ],
       "mtu": 9000,
-      "stack": "mixed",
       "dns_mode": "hijack",
       "auto_route": true,
       "strict_route": true,
