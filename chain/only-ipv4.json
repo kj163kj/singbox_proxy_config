@@ -40,7 +40,6 @@
         "172.19.0.1/30"
       ],
       "mtu": 9000,
-      "stack": "system",
       "auto_route": false,
       "strict_route": false,
       "dns_mode": "disabled"
