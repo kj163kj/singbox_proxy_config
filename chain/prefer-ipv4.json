@@ -31,6 +31,13 @@
       "dns_mode": "hijack",
       "auto_route": true,
       "strict_route": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "set_system_proxy": false
     }
   ],
   "outbounds": [
@@ -276,7 +283,8 @@
       {
         "action": "sniff",
         "inbound": [
-          "tun-in"
+          "tun-in",
+          "mixed-in"
         ]
       },
       {
