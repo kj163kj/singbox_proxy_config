@@ -32,7 +32,6 @@
         "172.18.0.1/30"
       ],
       "mtu": 1420,
-      "stack": "gvisor",
       "dns_mode": "hijack",
       "auto_route": true,
       "strict_route": true,
