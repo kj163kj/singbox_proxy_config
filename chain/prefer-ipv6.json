@@ -2,8 +2,7 @@
   "log": {
     "disabled": false,
     "level": "info",
-    "timestamp": false,
-    "output": "/data/adb/box/run/sing-box.log"
+    "timestamp": false
   },
   "experimental": {
     "clash_api": {

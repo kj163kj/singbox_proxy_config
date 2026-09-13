@@ -9,4 +9,4 @@
 - `prefer-ipv6.json`：IPv6 优先
 - `no-preference.json`：不指定 IP 协议偏好
 
-配置保留 `/data/adb/box` 日志路径以及 Box 使用的 TProxy/TUN 入站。使用前请通过 Sub-Store 填入真实节点，并修改 Clash API 密钥和端口。
+配置保留 Box 使用的 TProxy/TUN 入站。使用前请通过 Sub-Store 填入真实节点，并修改 Clash API 密钥和端口。
