@@ -4,6 +4,7 @@
 
 - `standard/`：普通代理模板
 - `chain/`：机场节点 → 落地节点链式代理模板
+- `only-ipv4.json`：DNS 仅使用 IPv4，拒绝 AAAA 查询，TUN 仅保留 IPv4 地址
 - `prefer-ipv4.json`：IPv4 优先
 - `prefer-ipv6.json`：IPv6 优先
 - `no-preference.json`：不指定 IP 协议偏好
