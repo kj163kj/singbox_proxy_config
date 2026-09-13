@@ -22,10 +22,12 @@
 
 ```text
 standard/
+├── only-ipv4.json
 ├── prefer-ipv4.json
 ├── prefer-ipv6.json
 └── no-preference.json
 chain/
+├── only-ipv4.json
 ├── prefer-ipv4.json
 ├── prefer-ipv6.json
 └── no-preference.json
@@ -33,6 +35,7 @@ chain/
 
 - `standard`：普通代理模板，没有机场前置节点
 - `chain`：链式代理模板，通过“机场节点 → 落地节点”连接
+- `only-ipv4`：DNS 仅使用 IPv4，拒绝 AAAA 查询，TUN 仅保留 IPv4 地址
 - `prefer-ipv4`：DNS 优先使用 IPv4
 - `prefer-ipv6`：DNS 优先使用 IPv6
 - `no-preference`：不指定 DNS IP 协议偏好
