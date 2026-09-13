@@ -19,7 +19,6 @@
         "fdfe:dcba:9876::1/126"
       ],
       "mtu": 1420,
-      "stack": "mixed",
       "dns_mode": "hijack",
       "auto_route": true
     }
